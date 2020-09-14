@@ -47,7 +47,7 @@ def volume(a, b):
 
 @volume(a = 1, b = 5)  # границы фигуры
 def f2(x):
-    func = x**2
+    func = x**2  # желаемая функция 
     return func ** 2
 
 
