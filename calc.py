@@ -36,8 +36,6 @@ def cube(a=0, b=0, c=0, d=0):
     if isinstance(a, (float, int)) and isinstance(b, (float, int)) and isinstance(c, (float, int)) and isinstance(d, (float, int)):
         if a == 0:
             return square(b, c, d)
-        if a == 0 and b == 0:
-            return line(c, d)
         if not (a == 0) and (d == 0):
             dis = -4 * b ** 3 * d + b ** 2 * c ** 2 - 4 * a * c ** 3 + 18 * a * b * c * d - 27 * a ** 2 * d ** 2
             if dis > 0:

@@ -1,23 +1,17 @@
-import math as m
-
-
 # Декоратор с аргументами оборачиваемой функции
 def square(func):
     def wrapper(*args, **kwargs):
         res = func(*args, **kwargs)
         return res ** 2
-
     return wrapper
 
 
 # Декоратор, который сам может принимать аргументы
-
-
-def power(pow):
+def pow(power):
     def decorator(func):
         def wrapper(*args, **kwargs):
             res = 1
-            for i in range(pow):
+            for i in range(power):
                 res *= func(*args, **kwargs)
             return res
         return wrapper
@@ -31,10 +25,8 @@ def f2(a, b, c):
     return []
 
 
-@power(pow=3.3)
+@pow(power=3)
 def f3(a, b):
     if isinstance(a, (float, int)) and isinstance(b, (float, int)):
         return a - b
     return []
-
-
